@@ -1,4 +1,4 @@
-program extrpts_gen
+program principle_radius
   !
   use commvars, only : DP, xstart, nui, ndim, ndim1, combi, &
                        lunidis, lnew, lblas
@@ -50,4 +50,4 @@ program extrpts_gen
   !call box_u ( )
   !
   !
-end program extrpts_gen
+end program principle_radius

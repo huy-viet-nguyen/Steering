@@ -71,8 +71,7 @@ subroutine compute_prds_half( )
         !
         ! generate new extreme points by adding M-point to vup and vdown
         !
-        np2 = 2**np
-        allocate( vup(0:np2-1,0:ndim) ) 
+        np2 = 2**np; allocate( vup(0:np2-1,0:ndim) ) 
         vup(:,:) = 0.d0; vup(0,0:ndim) = vu(0:ndim)
         !
         n = 0
@@ -85,7 +84,6 @@ subroutine compute_prds_half( )
              n = n + 1
                vup(n,0:ndim) =   vup(0,0:ndim) 
              do jj = 1, r
-                 !vup(n,0:ndim) =   vup(n,0:ndim) + M4(combi(ii,jj),0:ndim)
                  vup(n,0:ndim) =   vup(n,0:ndim) + ui(indx(combi(ii,jj)),0:ndim)
              enddo
            enddo

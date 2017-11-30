@@ -6,8 +6,7 @@ subroutine plane_normal_vect( points_coor, normal )
   !
   real(DP), intent(in) :: points_coor(1:ndim,1:ndim)
   real(DP), intent(out) :: normal(1:ndim1)
-  ! last element is used for the scalar d
-  !real(DP), external :: det3
+  ! last element is used for the offset
   !
   real(DP) :: v(2,1:ndim)
   integer :: i, j, k
@@ -34,7 +33,7 @@ subroutine hyp_normal_vect( points_coor, normal )
   !
   real(DP), intent(in) :: points_coor(xstart:ndim,xstart:ndim)
   real(DP), intent(out) :: normal(xstart:ndim1)
-  ! last element is used for the scalar d
+  ! last element is used for the offset
   real(DP), external :: det3
   !
   real(DP) :: v1(xstart:ndim), v2(xstart:ndim), v3(xstart:ndim)

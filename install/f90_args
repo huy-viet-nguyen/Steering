@@ -1,0 +1,9 @@
+FC = /usr/local/bin/gfortran -fopenmp
+LD = /usr/local/bin/gfortran -fopenmp
+# FFLAGS = -I c:/mingw/include
+FFLAGS = 
+LDFLAGS = $(LIBS)
+# add your libraries after LIBS= , e.g. -lblas
+LIBS = -framework Accelerate
+#LIBS = -L/home/nhviet/intel/Compiler/11.1/080/mkl/lib/em64t -lmkl_intel_lp64 -lmkl_sequential -lmkl_core
+# LIBS = -L/usr/local/share/applications/intel/Compiler/11.1/080/mkl/lib/em64t/ -lmkl_intel_lp64 -lmkl_sequential -lmkl_core
